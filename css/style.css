@@ -19,7 +19,7 @@
     outline-style: solid;
     outline-width: thick;
     outline-color: forestgreen;
-    /*float: left;*/
+    /*float: left;*/ 
    /* position: fixed;
     top: 3opx;
     left: 30px;
@@ -28,9 +28,15 @@
     /*
     visibility: hidden;
     display: none;*/
-    
+    text-align: center;
+    font-family: sans-serif;
+    animation: myanimation 1s;
 }
 
+@keyframes myanimation{
+    from{background: green}
+    to{background: red}
+}
 .apple{
     background-color: beige;
     height: 100px;
@@ -45,7 +51,18 @@
     top: 20px;
    left: 40px;*/
    /* float: right;*/
-    
+    transition: width ls,height ls,transform ls;
+}
+
+.apple:hover{
+    width: 180px;
+    height: 180px;
+    transform: rotateX(180deg);
+}
+
+.microsoft:hover{
+    overflow: hidden;
+    white-space: normal;
 }
 
 .microsoft {
@@ -56,8 +73,20 @@
     /*position: absolute;
     top: 10px;
     left: 200px;*/
+    /*overflow: hidden;
+    white-space: nowrap;
+    text-overflow: clip;*/
+    word-break: break-all;
+}
+
+#image1 {
+    height: 100px;
+    width: 200px;
+    background: url(/images/grey.jpg) 100px 200px;
+    opacity: 0.4px;
     
 }
+
 
 .span {
     font-style: italic;
@@ -68,3 +97,21 @@ p {
     
 }
 
+ul.list1{
+    list-style: square;
+    /*list-style-image: url(/images/grey.jpg);
+    background-repeat: no-repeat;
+    background-size: 0px;*/
+}
+
+a:active{
+    font-size: 6em;
+}
+
+a:visited{
+    color: aqua;
+}
+a:hover{
+    
+    font-size: 6em;
+}
